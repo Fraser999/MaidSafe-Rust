@@ -1,0 +1,27 @@
+[submodule "Crust"]
+	path = Crust
+	url = git@github.com:Fraser999/crust
+[submodule "Drive"]
+	path = Drive
+	url = git@github.com:Fraser999/drive
+[submodule "LruTimeCache"]
+	path = LruTimeCache
+	url = git@github.com:Fraser999/lru_time_cache
+[submodule "MaidSafeClient"]
+	path = MaidSafeClient
+	url = git@github.com:Fraser999/maidsafe_client
+[submodule "MaidSafeTypes"]
+	path = MaidSafeTypes
+	url = git@github.com:Fraser999/maidsafe_types
+[submodule "MaidSafeVault"]
+	path = MaidSafeVault
+	url = git@github.com:Fraser999/maidsafe_vault
+[submodule "MessageFilter"]
+	path = MessageFilter
+	url = git@github.com:Fraser999/message_filter
+[submodule "Routing"]
+	path = Routing
+	url = git@github.com:Fraser999/routing
+[submodule "SelfEncryption"]
+	path = SelfEncryption
+	url = git@github.com:Fraser999/self_encryption
