@@ -1,3 +1,6 @@
+[submodule "Accumulator"]
+    path = Accumulator
+    url = git@github.com:Fraser999/accumulator
 [submodule "Crust"]
 	path = Crust
 	url = git@github.com:Fraser999/crust
@@ -25,9 +28,6 @@
 [submodule "SelfEncryption"]
 	path = SelfEncryption
 	url = git@github.com:Fraser999/self_encryption
-[submodule "Accumulator"]
-	path = Accumulator
-	url = git@github.com:Fraser999/accumulator
 [submodule "Sentinel"]
 	path = Sentinel
 	url = git@github.com:Fraser999/sentinel
