@@ -1,0 +1,12 @@
+[user]
+	email = fraser.hutchison@maidsafe.net
+	name = Fraser Hutchison
+[push]
+	default = simple
+[fetch]
+	prune = true
+[help]
+	autocorrect = -1
+[status]
+	short = true
+	branch = true
