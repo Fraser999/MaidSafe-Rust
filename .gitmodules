@@ -13,6 +13,12 @@
 [submodule "MaidSafeClient"]
 	path = MaidSafeClient
 	url = git@github.com:Fraser999/maidsafe_client
+[submodule "MaidSafeDNS"]
+	path = MaidSafeDNS
+	url = git@github.com:Fraser999/maidsafe_dns
+[submodule "MaidSafeNFS"]
+	path = MaidSafeNFS
+	url = git@github.com:Fraser999/maidsafe_nfs
 [submodule "MaidSafeTypes"]
 	path = MaidSafeTypes
 	url = git@github.com:Fraser999/maidsafe_types
