@@ -18,9 +18,9 @@ set "starting_path=%cd%"
 set super_project_path=%~dp0
 
 for /d %%g in ("%super_project_path%*") do (
-    echo Running 'cargo %*' in %%g
+    echo Running '%*' in %%g
     cd %%g
-    cargo %*
+    %*
     echo ================================================================================
 )
 
