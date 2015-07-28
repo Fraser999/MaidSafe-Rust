@@ -25,6 +25,9 @@
 [submodule "MaidSafeVault"]
 	path = MaidSafeVault
 	url = git@github.com:Fraser999/maidsafe_vault
+[submodule "MemoryMap"]
+	path = MemoryMap
+	url = git@github.com:Fraser999/memory_map
 [submodule "MessageFilter"]
 	path = MessageFilter
 	url = git@github.com:Fraser999/message_filter
