@@ -10,30 +10,27 @@
 [submodule "LruTimeCache"]
 	path = LruTimeCache
 	url = git@github.com:Fraser999/lru_time_cache
-[submodule "MaidSafeClient"]
-	path = MaidSafeClient
-	url = git@github.com:Fraser999/maidsafe_client
-[submodule "MaidSafeDNS"]
-	path = MaidSafeDNS
-	url = git@github.com:Fraser999/maidsafe_dns
-[submodule "MaidSafeNFS"]
-	path = MaidSafeNFS
-	url = git@github.com:Fraser999/maidsafe_nfs
-[submodule "MaidSafeTypes"]
-	path = MaidSafeTypes
-	url = git@github.com:Fraser999/maidsafe_types
-[submodule "MaidSafeVault"]
-	path = MaidSafeVault
-	url = git@github.com:Fraser999/maidsafe_vault
 [submodule "MemoryMap"]
-	path = MemoryMap
-	url = git@github.com:Fraser999/memory_map
+    path = MemoryMap
+    url = git@github.com:Fraser999/memory_map
 [submodule "MessageFilter"]
-	path = MessageFilter
-	url = git@github.com:Fraser999/message_filter
+    path = MessageFilter
+    url = git@github.com:Fraser999/message_filter
 [submodule "Routing"]
-	path = Routing
-	url = git@github.com:Fraser999/routing
+    path = Routing
+    url = git@github.com:Fraser999/routing
+[submodule "SafeClient"]
+	path = "SAFE Client"
+	url = git@github.com:Fraser999/safe_client
+[submodule "SafeDNS"]
+	path = "SAFE DNS"
+	url = git@github.com:Fraser999/safe_dns
+[submodule "SafeNFS"]
+	path = "SAFE NFS"
+	url = git@github.com:Fraser999/safe_nfs
+[submodule "SafeVault"]
+	path = "SAFE Vault"
+	url = git@github.com:Fraser999/safe_vault
 [submodule "SelfEncryption"]
 	path = SelfEncryption
 	url = git@github.com:Fraser999/self_encryption
