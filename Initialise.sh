@@ -5,6 +5,7 @@ git submodule update --init
 git submodule foreach 'git checkout master'
 echo "==============================================================================="
 
+IFS=$(echo -en "\n\b")
 for i in `grep path .gitmodules | sed 's/.*= //'` ; do
   echo -e "Configuring $i\n------------`echo "$i" | tr [:print:] -`"
 
