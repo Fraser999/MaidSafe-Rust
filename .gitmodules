@@ -8,13 +8,13 @@
 	path = Drive
 	url = git@github.com:Fraser999/drive
 [submodule "LruTimeCache"]
-	path = LruTimeCache
+	path = LRU Time Cache
 	url = git@github.com:Fraser999/lru_time_cache
 [submodule "MemoryMap"]
-	path = MemoryMap
+	path = Memory Map
 	url = git@github.com:Fraser999/memory_map
 [submodule "MessageFilter"]
-	path = MessageFilter
+	path = Message Filter
 	url = git@github.com:Fraser999/message_filter
 [submodule "Routing"]
 	path = Routing
@@ -32,7 +32,7 @@
 	path = SAFE Vault
 	url = git@github.com:Fraser999/safe_vault
 [submodule "SelfEncryption"]
-	path = SelfEncryption
+	path = Self-Encryption
 	url = git@github.com:Fraser999/self_encryption
 [submodule "Sentinel"]
 	path = Sentinel
