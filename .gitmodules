@@ -19,18 +19,18 @@
 [submodule "Routing"]
     path = Routing
     url = git@github.com:Fraser999/routing
-[submodule "SafeClient"]
-	path = "SAFE Client"
-	url = git@github.com:Fraser999/safe_client
-[submodule "SafeDNS"]
-	path = "SAFE DNS"
-	url = git@github.com:Fraser999/safe_dns
-[submodule "SafeNFS"]
-	path = "SAFE NFS"
-	url = git@github.com:Fraser999/safe_nfs
-[submodule "SafeVault"]
-	path = "SAFE Vault"
-	url = git@github.com:Fraser999/safe_vault
+[submodule "SAFE Client"]
+    path = SAFE Client
+    url = git@github.com:Fraser999/safe_client
+[submodule "SAFE DNS"]
+    path = SAFE DNS
+    url = git@github.com:Fraser999/safe_dns
+[submodule "SAFE NFS"]
+    path = SAFE NFS
+    url = git@github.com:Fraser999/safe_nfs
+[submodule "SAFE Vault"]
+    path = SAFE Vault
+    url = git@github.com:Fraser999/safe_vault
 [submodule "SelfEncryption"]
 	path = SelfEncryption
 	url = git@github.com:Fraser999/self_encryption
