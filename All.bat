@@ -32,12 +32,12 @@ goto :eof
 
 :show_help
 setlocal EnableDelayedExpansion
-set output=Pass cargo args to be invoked in each repository.^
+set output=Pass args to be invoked in each repository.^
 
 ^
 
 Example usage:^
 
-    %~nx0 test --release
+    %~nx0 cargo test --release
 echo !output!
 goto :eof
