@@ -28,6 +28,9 @@
 [submodule "SAFE FFI"]
 	path = SAFE FFI
 	url = git@github.com:Fraser999/safe_ffi
+[submodule "SAFE Launcher"]
+	path = SAFE Launcher
+	url = git@github.com:Fraser999/safe_launcher
 [submodule "SAFE NFS"]
 	path = SAFE NFS
 	url = git@github.com:Fraser999/safe_nfs
