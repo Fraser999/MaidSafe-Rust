@@ -43,3 +43,6 @@
 [submodule "Sentinel"]
 	path = Sentinel
 	url = git@github.com:Fraser999/sentinel
+[submodule "Utilities"]
+	path = Utilities
+	url = git@github.com:Fraser999/maidsafe_utilities
