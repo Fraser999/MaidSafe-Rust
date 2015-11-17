@@ -7,42 +7,45 @@
 [submodule "Drive"]
 	path = Drive
 	url = git@github.com:Fraser999/drive
+[submodule "Kademlia Routing Table"]
+	path = Kademlia Routing Table
+	url = git@github.com:Fraser999/kademlia_routing_table
 [submodule "LRU Time Cache"]
-	path = LRU Time Cache
-	url = git@github.com:Fraser999/lru_time_cache
+    path = LRU Time Cache
+    url = git@github.com:Fraser999/lru_time_cache
 [submodule "Memory Map"]
-	path = Memory Map
-	url = git@github.com:Fraser999/memory_map
+    path = Memory Map
+    url = git@github.com:Fraser999/memory_map
 [submodule "Message Filter"]
-	path = Message Filter
-	url = git@github.com:Fraser999/message_filter
+    path = Message Filter
+    url = git@github.com:Fraser999/message_filter
 [submodule "Routing"]
-	path = Routing
-	url = git@github.com:Fraser999/routing
+    path = Routing
+    url = git@github.com:Fraser999/routing
 [submodule "SAFE Core"]
-	path = SAFE Core
-	url = git@github.com:Fraser999/safe_core
+    path = SAFE Core
+    url = git@github.com:Fraser999/safe_core
 [submodule "SAFE DNS"]
-	path = SAFE DNS
-	url = git@github.com:Fraser999/safe_dns
+    path = SAFE DNS
+    url = git@github.com:Fraser999/safe_dns
 [submodule "SAFE FFI"]
-	path = SAFE FFI
-	url = git@github.com:Fraser999/safe_ffi
+    path = SAFE FFI
+    url = git@github.com:Fraser999/safe_ffi
 [submodule "SAFE Launcher"]
-	path = SAFE Launcher
-	url = git@github.com:Fraser999/safe_launcher
+    path = SAFE Launcher
+    url = git@github.com:Fraser999/safe_launcher
 [submodule "SAFE NFS"]
-	path = SAFE NFS
-	url = git@github.com:Fraser999/safe_nfs
+    path = SAFE NFS
+    url = git@github.com:Fraser999/safe_nfs
 [submodule "SAFE Vault"]
-	path = SAFE Vault
-	url = git@github.com:Fraser999/safe_vault
+    path = SAFE Vault
+    url = git@github.com:Fraser999/safe_vault
 [submodule "Self-Encryption"]
-	path = Self-Encryption
-	url = git@github.com:Fraser999/self_encryption
+    path = Self-Encryption
+    url = git@github.com:Fraser999/self_encryption
 [submodule "Sentinel"]
-	path = Sentinel
-	url = git@github.com:Fraser999/sentinel
+    path = Sentinel
+    url = git@github.com:Fraser999/sentinel
 [submodule "Utilities"]
-	path = Utilities
-	url = git@github.com:Fraser999/maidsafe_utilities
+    path = Utilities
+    url = git@github.com:Fraser999/maidsafe_utilities
