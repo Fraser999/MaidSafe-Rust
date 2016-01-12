@@ -1,15 +1,21 @@
 [submodule "Accumulator"]
 	path = Accumulator
 	url = git@github.com:Fraser999/accumulator
+[submodule "Chunk Store"]
+	path = Chunk Store
+	url = git@github.com:Fraser999/chunk_store
 [submodule "Crust"]
-	path = Crust
-	url = git@github.com:Fraser999/crust
+    path = Crust
+    url = git@github.com:Fraser999/crust
 [submodule "Drive"]
-	path = Drive
-	url = git@github.com:Fraser999/drive
+    path = Drive
+    url = git@github.com:Fraser999/drive
+[submodule "Get Interface Addresses"]
+    path = Get Interface Addresses
+    url = git@github.com:Fraser999/get_if_addrs
 [submodule "Kademlia Routing Table"]
-	path = Kademlia Routing Table
-	url = git@github.com:Fraser999/kademlia_routing_table
+    path = Kademlia Routing Table
+    url = git@github.com:Fraser999/kademlia_routing_table
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
@@ -47,5 +53,5 @@
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
 [submodule "XOR Name"]
-	path = XOR Name
-	url = git@github.com:Fraser999/xor_name
+    path = XOR Name
+    url = git@github.com:Fraser999/xor_name
