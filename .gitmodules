@@ -4,6 +4,9 @@
 [submodule "Chunk Store"]
 	path = Chunk Store
 	url = git@github.com:Fraser999/chunk_store
+[submodule "Config File Handler"]
+	path = Config File Handler
+	url = git@github.com:Fraser999/config_file_handler
 [submodule "Crust"]
     path = Crust
     url = git@github.com:Fraser999/crust
