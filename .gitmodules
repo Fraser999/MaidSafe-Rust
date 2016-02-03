@@ -26,8 +26,11 @@
     path = Message Filter
     url = git@github.com:Fraser999/message_filter
 [submodule "MPID Messaging"]
-	path = MPID Messaging
-	url = git@github.com:Fraser999/mpid_messaging
+    path = MPID Messaging
+    url = git@github.com:Fraser999/mpid_messaging
+[submodule "NAT Traversal"]
+	path = NAT Traversal
+	url = git@github.com:Fraser999/nat_traversal
 [submodule "Routing"]
     path = Routing
     url = git@github.com:Fraser999/routing
@@ -56,8 +59,11 @@
     path = Sentinel
     url = git@github.com:Fraser999/sentinel
 [submodule "Service Discovery"]
-	path = Service Discovery
-	url = git@github.com:Fraser999/service_discovery
+    path = Service Discovery
+    url = git@github.com:Fraser999/service_discovery
+[submodule "Socket Address"]
+    path = Socket Address
+    url = git@github.com:Fraser999/socket_addr
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
