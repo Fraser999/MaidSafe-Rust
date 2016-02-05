@@ -52,6 +52,9 @@
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault
+[submodule "Secure Serialisation"]
+	path = Secure Serialisation
+	url = git@github.com:Fraser999/secure_serialisation
 [submodule "Self-Encryption"]
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
