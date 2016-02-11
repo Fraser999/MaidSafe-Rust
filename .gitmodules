@@ -58,9 +58,6 @@
 [submodule "Self-Encryption"]
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
-[submodule "Sentinel"]
-    path = Sentinel
-    url = git@github.com:Fraser999/sentinel
 [submodule "Service Discovery"]
     path = Service Discovery
     url = git@github.com:Fraser999/service_discovery
