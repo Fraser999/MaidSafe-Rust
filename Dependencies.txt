@@ -1,0 +1,88 @@
+DEPENDENCIES
+------------
+
+===================================================================================================|
+Config File Handler     |                                                                          |
+------------------------|--------------------------------------------------------------------------|
+Drive                   |                                                                          |
+------------------------|--------------------------------------------------------------------------|
+Get Interface Addresses |                                                                          | Badly out of date - unsafe
+------------------------|--------------------------------------------------------------------------|
+LRU Time Cache          |                                                                          |
+------------------------|--------------------------------------------------------------------------|
+Message Filter          |                                                                          |
+------------------------|--------------------------------------------------------------------------|
+Socket Addresses        |                                                                          |
+------------------------|--------------------------------------------------------------------------|
+Utilities               |                                                                          |
+===================================================================================================|
+===================================================================================================|
+Accumulator             | LRU Time Cache                                                           |
+------------------------|--------------------------------------------------------------------------|
+Secure Serialisation    | Utilities                                                                |
+------------------------|--------------------------------------------------------------------------|
+Self-Encryption         | Utilities                                                                |
+------------------------|--------------------------------------------------------------------------|
+Service Discovery       | Utilities                                                                |
+------------------------|--------------------------------------------------------------------------|
+XOR Name                | Utilities                                                                |
+===================================================================================================|
+===================================================================================================|
+Chunk Store             | XOR Name                                                                 |
+------------------------|--------------------------------------------------------------------------|
+Crust                   | Config File Handler        Secure Serialisation      Socket Address      |
+                        | Get Interface Addresses    Service Discovery         Utilities           |
+                        | NAT Traversal                                                            |
+------------------------|--------------------------------------------------------------------------|
+Kademlia Routing Table  | Utilities                  XOR Name                                      |
+------------------------|--------------------------------------------------------------------------|
+MPID Messaging          | Utilities                  XOR Name                                      |
+------------------------|--------------------------------------------------------------------------|
+NAT Traversal           | Get Interface Addresses    Socket Address            Utilities           |
+===================================================================================================|
+===================================================================================================|
+Routing                 | Accumulator                LRU Time Cache            Service Discovery   |
+                        | Config File Handler        Message Filter            Socket Address      |
+                        | Crust                      NAT Traversal             Utilities           |
+                        | Get Interface Addresses    Secure Serialisation      XOR Name            |
+                        | Kademlia Routing Table                                                   |
+===================================================================================================|
+===================================================================================================|
+SAFE Core               | Accumulator                Message Filter            Self-Encryption     |
+                        | Config File Handler        MPID Messaging            Service Discovery   |
+                        | Crust                      NAT Traversal             Socket Address      |
+                        | Get Interface Addresses    Routing                   Utilities           |
+                        | Kademlia Routing Table     Secure Serialisation      XOR Name            |
+                        | LRU Time Cache                                                           |
+------------------------|--------------------------------------------------------------------------|
+SAFE Vault              | Accumulator                Kademlia Routing Table    Secure Serialisation|
+                        | Chunk Store                LRU Time Cache            Service Discovery   |
+                        | Config File Handler        Message Filter            Socket Address      |
+                        | Crust                      NAT Traversal             Utilities           |
+                        | Get Interface Addresses    Routing                   XOR Name            |
+===================================================================================================|
+===================================================================================================|
+SAFE NFS                | Accumulator                Message Filter            Self-Encryption     |
+                        | Config File Handler        MPID Messaging            Service Discovery   |
+                        | Crust                      NAT Traversal             Socket Address      |
+                        | Get Interface Addresses    Routing                   Utilities           |
+                        | Kademlia Routing Table     SAFE Core                 XOR Name            |
+                        | LRU Time Cache             Secure Serialisation                          |
+===================================================================================================|
+===================================================================================================|
+SAFE DNS                | Accumulator                Message Filter            Secure Serialisation|
+                        | Config File Handler        MPID Messaging            Self-Encryption     |
+                        | Crust                      NAT Traversal             Service Discovery   |
+                        | Get Interface Addresses    Routing                   Socket Address      |
+                        | Kademlia Routing Table     SAFE Core                 Utilities           |
+                        | LRU Time Cache             SAFE NFS                  XOR Name            |
+===================================================================================================|
+===================================================================================================|
+SAFE FFI                | Accumulator                MPID Messaging            Secure Serialisation|
+                        | Config File Handler        NAT Traversal             Self-Encryption     |
+                        | Crust                      Routing                   Service Discovery   |
+                        | Get Interface Addresses    SAFE Core                 Socket Address      |
+                        | Kademlia Routing Table     SAFE DNS                  Utilities           |
+                        | LRU Time Cache             SAFE NFS                  XOR Name            |
+                        | Message Filter                                                           |
+===================================================================================================|
