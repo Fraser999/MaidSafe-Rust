@@ -37,18 +37,12 @@
 [submodule "SAFE Core"]
     path = SAFE Core
     url = git@github.com:Fraser999/safe_core
-[submodule "SAFE DNS"]
-    path = SAFE DNS
-    url = git@github.com:Fraser999/safe_dns
 [submodule "SAFE FFI"]
     path = SAFE FFI
     url = git@github.com:Fraser999/safe_ffi
 [submodule "SAFE Launcher"]
     path = SAFE Launcher
     url = git@github.com:Fraser999/safe_launcher
-[submodule "SAFE NFS"]
-    path = SAFE NFS
-    url = git@github.com:Fraser999/safe_nfs
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault

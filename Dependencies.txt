@@ -63,27 +63,10 @@ SAFE Vault              | Accumulator                Kademlia Routing Table    S
                         | Get Interface Addresses    Routing                   XOR Name            |
 ===================================================================================================|
 ===================================================================================================|
-SAFE NFS                | Accumulator                Message Filter            Self-Encryption     |
+SAFE FFI                | Accumulator                Message Filter            Self-Encryption     |
                         | Config File Handler        MPID Messaging            Service Discovery   |
                         | Crust                      NAT Traversal             Socket Address      |
                         | Get Interface Addresses    Routing                   Utilities           |
                         | Kademlia Routing Table     SAFE Core                 XOR Name            |
                         | LRU Time Cache             Secure Serialisation                          |
-===================================================================================================|
-===================================================================================================|
-SAFE DNS                | Accumulator                Message Filter            Secure Serialisation|
-                        | Config File Handler        MPID Messaging            Self-Encryption     |
-                        | Crust                      NAT Traversal             Service Discovery   |
-                        | Get Interface Addresses    Routing                   Socket Address      |
-                        | Kademlia Routing Table     SAFE Core                 Utilities           |
-                        | LRU Time Cache             SAFE NFS                  XOR Name            |
-===================================================================================================|
-===================================================================================================|
-SAFE FFI                | Accumulator                MPID Messaging            Secure Serialisation|
-                        | Config File Handler        NAT Traversal             Self-Encryption     |
-                        | Crust                      Routing                   Service Discovery   |
-                        | Get Interface Addresses    SAFE Core                 Socket Address      |
-                        | Kademlia Routing Table     SAFE DNS                  Utilities           |
-                        | LRU Time Cache             SAFE NFS                  XOR Name            |
-                        | Message Filter                                                           |
 ===================================================================================================|
