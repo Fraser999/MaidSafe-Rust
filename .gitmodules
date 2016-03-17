@@ -43,6 +43,9 @@
 [submodule "SAFE Launcher"]
     path = SAFE Launcher
     url = git@github.com:Fraser999/safe_launcher
+[submodule "SAFE Network Common"]
+    path = SAFE Network Common
+    url = git@github.com:Fraser999/safe_network_common
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault
