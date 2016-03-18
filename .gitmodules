@@ -25,9 +25,6 @@
 [submodule "Message Filter"]
     path = Message Filter
     url = git@github.com:Fraser999/message_filter
-[submodule "MPID Messaging"]
-    path = MPID Messaging
-    url = git@github.com:Fraser999/mpid_messaging
 [submodule "NAT Traversal"]
 	path = NAT Traversal
 	url = git@github.com:Fraser999/nat_traversal
