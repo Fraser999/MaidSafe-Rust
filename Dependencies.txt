@@ -14,8 +14,6 @@ Message Filter          |                                                       
 ------------------------|--------------------------------------------------------------------------|
 Socket Addresses        |                                                                          |
 ------------------------|--------------------------------------------------------------------------|
-Timed Buffer            |                                                                          |
-------------------------|--------------------------------------------------------------------------|
 Utilities               |                                                                          |
 ===================================================================================================|
 ===================================================================================================|
@@ -46,32 +44,32 @@ Crust                   | Config File Handler        Secure Serialisation      S
                         | NAT Traversal                                                            |
 ===================================================================================================|
 ===================================================================================================|
-Routing                 | Accumulator                LRU Time Cache            Socket Address      |
-                        | Config File Handler        Message Filter            Timed Buffer        |
+Routing                 | Accumulator                LRU Time Cache            Service Discovery   |
+                        | Config File Handler        Message Filter            Socket Address      |
                         | Crust                      NAT Traversal             Utilities           |
                         | Get Interface Addresses    Secure Serialisation      XOR Name            |
-                        | Kademlia Routing Table     Service Discovery                             |
+                        | Kademlia Routing Table                                                   |
 ===================================================================================================|
 ===================================================================================================|
-SAFE Core               | Accumulator                Message Filter            Service Discovery   |
-                        | Config File Handler        NAT Traversal             Socket Address      |
-                        | Crust                      Routing                   Timed Buffer        |
+SAFE Core               | Accumulator                Message Filter            Self-Encryption     |
+                        | Config File Handler        NAT Traversal             Service Discovery   |
+                        | Crust                      Routing                   Socket Address      |
                         | Get Interface Addresses    SAFE Network Common       Utilities           |
                         | Kademlia Routing Table     Secure Serialisation      XOR Name            |
-                        | LRU Time Cache             Self-Encryption                               |
+                        | LRU Time Cache                                                           |
 ------------------------|--------------------------------------------------------------------------|
-SAFE Vault              | Accumulator                LRU Time Cache            Service Discovery   |
-                        | Chunk Store                Message Filter            Socket Address      |
-                        | Config File Handler        NAT Traversal             Timed Buffer        |
+SAFE Vault              | Accumulator                LRU Time Cache            Secure Serialisation|
+                        | Chunk Store                Message Filter            Service Discovery   |
+                        | Config File Handler        NAT Traversal             Socket Address      |
                         | Crust                      Routing                   Utilities           |
                         | Get Interface Addresses    SAFE Network Common       XOR Name            |
-                        | Kademlia Routing Table     Secure Serialisation                          |
+                        | Kademlia Routing Table                                                   |
 ===================================================================================================|
 ===================================================================================================|
 SAFE FFI                | Accumulator                Message Filter            Self-Encryption     |
                         | Config File Handler        NAT Traversal             Service Discovery   |
                         | Crust                      Routing                   Socket Address      |
-                        | Get Interface Addresses    SAFE Core                 Timed Buffer        |
-                        | Kademlia Routing Table     SAFE Network Common       Utilities           |
-                        | LRU Time Cache             Secure Serialisation      XOR Name            |
+                        | Get Interface Addresses    SAFE Core                 Utilities           |
+                        | Kademlia Routing Table     SAFE Network Common       XOR Name            |
+                        | LRU Time Cache             Secure Serialisation                          |
 ===================================================================================================|
