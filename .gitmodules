@@ -58,6 +58,9 @@
 [submodule "Socket Address"]
     path = Socket Address
     url = git@github.com:Fraser999/socket_addr
+[submodule "Transport"]
+    path = Transport
+    url = git@github.com:Fraser999/transport
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
