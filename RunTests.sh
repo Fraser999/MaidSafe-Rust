@@ -2,19 +2,19 @@
 function run_cargo {
   local FileName="$OutputDir/$(echo -e "${@}" | tr -d '[[:space:]]')"
   echo "  Running cargo $@ on the $Type channel..."
-  multirust run $Type cargo --version > "$FileName.log"
-  multirust run $Type rustc --version >> "$FileName.log"
-  { time multirust run $Type cargo "$@" >> "$FileName.log" 2>"$FileName.err" ; } 2>>"$FileName.log"
+  rustup run $Type cargo --version > "$FileName.log"
+  rustup run $Type rustc --version >> "$FileName.log"
+  { time rustup run $Type cargo "$@" >> "$FileName.log" 2>"$FileName.err" ; } 2>>"$FileName.log"
 }
 
 function run_all {
   for Type in stable beta nightly; do
     local OutputDir="$Dir/$Submodule/$Type"_channel
     mkdir -p "$OutputDir"
-    multirust run $Type cargo clean
+    rustup run $Type cargo clean
     run_cargo build
     run_cargo test
-    multirust run $Type cargo clean
+    rustup run $Type cargo clean
     run_cargo build --release
     run_cargo test --release
     run_cargo bench
