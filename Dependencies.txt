@@ -65,11 +65,3 @@ SAFE Vault              | Accumulator                LRU Time Cache            S
                         | Get Interface Addresses    SAFE Network Common       XOR Name            |
                         | Kademlia Routing Table                                                   |
 ===================================================================================================|
-===================================================================================================|
-SAFE FFI                | Accumulator                Message Filter            Self-Encryption     |
-                        | Config File Handler        NAT Traversal             Service Discovery   |
-                        | Crust                      Routing                   Socket Address      |
-                        | Get Interface Addresses    SAFE Core                 Utilities           |
-                        | Kademlia Routing Table     SAFE Network Common       XOR Name            |
-                        | LRU Time Cache             Secure Serialisation                          |
-===================================================================================================|

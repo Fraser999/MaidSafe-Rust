@@ -1,12 +1,12 @@
 [submodule "Accumulator"]
-	path = Accumulator
-	url = git@github.com:Fraser999/accumulator
+    path = Accumulator
+    url = git@github.com:Fraser999/accumulator
 [submodule "Chunk Store"]
-	path = Chunk Store
-	url = git@github.com:Fraser999/chunk_store
+    path = Chunk Store
+    url = git@github.com:Fraser999/chunk_store
 [submodule "Config File Handler"]
-	path = Config File Handler
-	url = git@github.com:Fraser999/config_file_handler
+    path = Config File Handler
+    url = git@github.com:Fraser999/config_file_handler
 [submodule "Crust"]
     path = Crust
     url = git@github.com:Fraser999/crust
@@ -26,17 +26,14 @@
     path = Message Filter
     url = git@github.com:Fraser999/message_filter
 [submodule "NAT Traversal"]
-	path = NAT Traversal
-	url = git@github.com:Fraser999/nat_traversal
+    path = NAT Traversal
+    url = git@github.com:Fraser999/nat_traversal
 [submodule "Routing"]
     path = Routing
     url = git@github.com:Fraser999/routing
 [submodule "SAFE Core"]
     path = SAFE Core
     url = git@github.com:Fraser999/safe_core
-[submodule "SAFE FFI"]
-    path = SAFE FFI
-    url = git@github.com:Fraser999/safe_ffi
 [submodule "SAFE Launcher"]
     path = SAFE Launcher
     url = git@github.com:Fraser999/safe_launcher
@@ -47,8 +44,8 @@
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault
 [submodule "Secure Serialisation"]
-	path = Secure Serialisation
-	url = git@github.com:Fraser999/secure_serialisation
+    path = Secure Serialisation
+    url = git@github.com:Fraser999/secure_serialisation
 [submodule "Self-Encryption"]
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
