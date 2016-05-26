@@ -61,6 +61,3 @@
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
-[submodule "XOR Name"]
-    path = XOR Name
-    url = git@github.com:Fraser999/xor_name
