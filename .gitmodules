@@ -22,9 +22,6 @@
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
-[submodule "Message Filter"]
-    path = Message Filter
-    url = git@github.com:Fraser999/message_filter
 [submodule "NAT Traversal"]
     path = NAT Traversal
     url = git@github.com:Fraser999/nat_traversal

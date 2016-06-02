@@ -12,8 +12,6 @@ Kademlia Routing Table  |                                                       
 ------------------------|--------------------------------------------------------------------------|
 LRU Time Cache          |                                                                          |
 ------------------------|--------------------------------------------------------------------------|
-Message Filter          |                                                                          |
-------------------------|--------------------------------------------------------------------------|
 Socket Addresses        |                                                                          |
 ------------------------|--------------------------------------------------------------------------|
 Transport               |                                                                          |
@@ -45,19 +43,19 @@ Crust                   | Config File Handler        NAT Traversal             S
 ===================================================================================================|
 Routing                 | Accumulator                Kademlia Routing Table    Service Discovery   |
                         | Config File Handler        LRU Time Cache            Socket Address      |
-                        | Crust                      Message Filter            Utilities           |
-                        | Get Interface Addresses    NAT Traversal                                 |
+                        | Crust                      NAT Traversal             Utilities           |
+                        | Get Interface Addresses                                                  |
 ===================================================================================================|
 ===================================================================================================|
 SAFE Core               | Accumulator                LRU Time Cache            Self-Encryption     |
-                        | Config File Handler        Message Filter            Service Discovery   |
-                        | Crust                      NAT Traversal             Socket Address      |
-                        | Get Interface Addresses    Routing                   Utilities           |
-                        | Kademlia Routing Table     SAFE Network Common                           |
+                        | Config File Handler        NAT Traversal             Service Discovery   |
+                        | Crust                      Routing                   Socket Address      |
+                        | Get Interface Addresses    SAFE Network Common       Utilities           |
+                        | Kademlia Routing Table                                                   |
 ------------------------|--------------------------------------------------------------------------|
 SAFE Vault              | Accumulator                Kademlia Routing Table    SAFE Network Common |
                         | Chunk Store                LRU Time Cache            Service Discovery   |
-                        | Config File Handler        Message Filter            Socket Address      |
-                        | Crust                      NAT Traversal             Utilities           |
-                        | Get Interface Addresses    Routing                                       |
+                        | Config File Handler        NAT Traversal             Socket Address      |
+                        | Crust                      Routing                   Utilities           |
+                        | Get Interface Addresses                                                  |
 ===================================================================================================|
