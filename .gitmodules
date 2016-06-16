@@ -10,21 +10,18 @@
 [submodule "Crust"]
     path = Crust
     url = git@github.com:Fraser999/crust
-[submodule "Drive"]
-    path = Drive
-    url = git@github.com:Fraser999/drive
 [submodule "Get Interface Addresses"]
     path = Get Interface Addresses
     url = git@github.com:Fraser999/get_if_addrs
 [submodule "Kademlia Routing Table"]
     path = Kademlia Routing Table
     url = git@github.com:Fraser999/kademlia_routing_table
+[submodule "libsodium Seeded PRNG"]
+	path = libsodium Seeded PRNG
+	url = git@github.com:Fraser999/libsodium_seeded_prng
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
-[submodule "NAT Traversal"]
-    path = NAT Traversal
-    url = git@github.com:Fraser999/nat_traversal
 [submodule "Routing"]
     path = Routing
     url = git@github.com:Fraser999/routing
@@ -46,15 +43,9 @@
 [submodule "Self-Encryption"]
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
-[submodule "Service Discovery"]
-    path = Service Discovery
-    url = git@github.com:Fraser999/service_discovery
 [submodule "Socket Address"]
     path = Socket Address
     url = git@github.com:Fraser999/socket_addr
-[submodule "Transport"]
-    path = Transport
-    url = git@github.com:Fraser999/transport
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
