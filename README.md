@@ -14,3 +14,38 @@
 | [secure_serialisation](https://github.com/maidsafe/secure_serialisation)     | [![](http://meritbadge.herokuapp.com/secure_serialisation)](https://crates.io/crates/secure_serialisation)     | [![Build Status](https://travis-ci.org/maidsafe/secure_serialisation.svg?branch=master)](https://travis-ci.org/maidsafe/secure_serialisation)     |                                                                                                                                                                         | [![Build status](https://ci.appveyor.com/api/projects/status/fw4t0s9dkipefjuy/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/secure-serialisation/branch/master)   | [![Coverage Status](https://coveralls.io/repos/maidsafe/secure_serialisation/badge.svg?branch=master&service=github)](https://coveralls.io/github/maidsafe/secure_serialisation?branch=master)     | [![Stories in Ready](https://badge.waffle.io/maidsafe/secure_serialisation.png?label=ready&title=Ready)](https://waffle.io/maidsafe/secure_serialisation)     |
 | [self_encryption](https://github.com/maidsafe/self_encryption)               | [![](http://meritbadge.herokuapp.com/self_encryption)](https://crates.io/crates/self_encryption)               | [![Build Status](https://travis-ci.org/maidsafe/self_encryption.svg?branch=master)](https://travis-ci.org/maidsafe/self_encryption)               |                                                                                                                                                                         | [![Build status](https://ci.appveyor.com/api/projects/status/htljxqrosx1i237s/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/self-encryption/branch/master)        | [![Coverage Status](https://coveralls.io/repos/maidsafe/self_encryption/badge.svg?branch=master&service=github)](https://coveralls.io/github/maidsafe/self_encryption?branch=master)               | [![Stories in Ready](https://badge.waffle.io/maidsafe/self_encryption.png?label=ready&title=Ready)](https://waffle.io/maidsafe/self_encryption)               |
 | [sodiumoxide_extras](https://github.com/maidsafe/sodiumoxide_extras)         | [![](http://meritbadge.herokuapp.com/sodiumoxide_extras)](https://crates.io/crates/sodiumoxide_extras)         | [![Build Status](https://travis-ci.org/maidsafe/sodiumoxide_extras.svg?branch=master)](https://travis-ci.org/maidsafe/sodiumoxide_extras)         |                                                                                                                                                                         | [![Build status](https://ci.appveyor.com/api/projects/status/p90mnj95porm9adn/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/sodiumoxide-extras/branch/master)     | [![Coverage Status](https://coveralls.io/repos/maidsafe/sodiumoxide_extras/badge.svg?branch=master&service=github)](https://coveralls.io/github/maidsafe/sodiumoxide_extras?branch=master)         | [![Stories in Ready](https://badge.waffle.io/maidsafe/sodiumoxide_extras.png?label=ready&title=Ready)](https://waffle.io/maidsafe/sodiumoxide_extras)         |
+
+# Setup for Building on 64-bit Windows
+
+1. Install [rustup](https://www.rustup.rs).
+
+1. Install [MSYS2](https://msys2.github.io).
+
+1. Run `mingw64_shell.bat` from wherever you installed MSYS2 (e.g. `C:\msys64`).
+
+1. From this terminal, install the required tools:
+
+   ```sh
+   pacman -Sy pacman-mirrors
+   pacman -S mingw-w64-x86_64-gcc
+   ```
+
+1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
+
+
+# Setup for Building on 32-bit Windows
+
+1. Install [rustup](https://www.rustup.rs).
+
+1. Install [MSYS2](https://msys2.github.io).
+
+1. Run `mingw32_shell.bat` from wherever you installed MSYS2 (e.g. `C:\msys32`).
+
+1. From this terminal, install the required tools:
+
+   ```sh
+   pacman -Sy pacman-mirrors
+   pacman -S mingw-w64-i686-gcc
+   ```
+
+1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
