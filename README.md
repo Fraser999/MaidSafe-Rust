@@ -15,6 +15,8 @@
 | [self_encryption](https://github.com/maidsafe/self_encryption)               | [![](http://meritbadge.herokuapp.com/self_encryption)](https://crates.io/crates/self_encryption)               | [![Build Status](https://travis-ci.org/maidsafe/self_encryption.svg?branch=master)](https://travis-ci.org/maidsafe/self_encryption)               |                                                                                                                                                                         | [![Build status](https://ci.appveyor.com/api/projects/status/htljxqrosx1i237s/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/self-encryption/branch/master)        | [![Coverage Status](https://coveralls.io/repos/maidsafe/self_encryption/badge.svg?branch=master&service=github)](https://coveralls.io/github/maidsafe/self_encryption?branch=master)               | [![Stories in Ready](https://badge.waffle.io/maidsafe/self_encryption.png?label=ready&title=Ready)](https://waffle.io/maidsafe/self_encryption)               |
 | [sodiumoxide_extras](https://github.com/maidsafe/sodiumoxide_extras)         | [![](http://meritbadge.herokuapp.com/sodiumoxide_extras)](https://crates.io/crates/sodiumoxide_extras)         | [![Build Status](https://travis-ci.org/maidsafe/sodiumoxide_extras.svg?branch=master)](https://travis-ci.org/maidsafe/sodiumoxide_extras)         |                                                                                                                                                                         | [![Build status](https://ci.appveyor.com/api/projects/status/p90mnj95porm9adn/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/sodiumoxide-extras/branch/master)     | [![Coverage Status](https://coveralls.io/repos/maidsafe/sodiumoxide_extras/badge.svg?branch=master&service=github)](https://coveralls.io/github/maidsafe/sodiumoxide_extras?branch=master)         | [![Stories in Ready](https://badge.waffle.io/maidsafe/sodiumoxide_extras.png?label=ready&title=Ready)](https://waffle.io/maidsafe/sodiumoxide_extras)         |
 
+
+
 # Setup for Building on 64-bit Windows
 
 1. Install [rustup](https://www.rustup.rs).
@@ -33,6 +35,7 @@
 1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
 
 
+
 # Setup for Building on 32-bit Windows
 
 1. Install [rustup](https://www.rustup.rs).
@@ -49,3 +52,29 @@
    ```
 
 1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
+
+
+
+# Setup for Cross-Compiling for ARM
+
+1. Install dependencies and toolchain:
+
+   ```sh
+   sudo apt-get install gcc-arm-linux-gnueabihf libc6-armhf-cross libc6-dev-armhf-cross
+   rustup target add armv7-unknown-linux-gnueabihf
+   ```
+
+1. Add the following to a [.cargo/config file](http://doc.crates.io/config.html):
+
+   ```
+   [target.armv7-unknown-linux-gnueabihf]
+   linker = "arm-linux-gnueabihf-gcc"
+   ```
+
+1. Build by running:
+
+   ```sh
+   cargo build --release --target armv7-unknown-linux-gnueabihf
+   ```
+
+Note: to build a native target, use `./configure --host=arm-linux-gnueabihf`.
