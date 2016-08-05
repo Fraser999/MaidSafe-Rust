@@ -16,6 +16,9 @@
 [submodule "Routing"]
     path = Routing
     url = git@github.com:Fraser999/routing
+[submodule "Rust Sodium"]
+    path = Rust Sodium
+    url = git@github.com:Fraser999/rust_sodium
 [submodule "SAFE Core"]
     path = SAFE Core
     url = git@github.com:Fraser999/safe_core
