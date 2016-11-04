@@ -6,8 +6,11 @@ git submodule foreach 'git checkout master'
 echo "==============================================================================="
 
 IFS=$(echo -en "\n\b")
+mkdir .sublime-projects
 for i in `grep path .gitmodules | sed 's/.*= //'` ; do
   echo -e "Configuring $i\n------------`echo "$i" | tr [:print:] -`"
+
+  printf '{\n\t"folders":\n\t[\n\t\t{\n\t\t\t"path": "../%s"\n\t\t}\n\t]\n}\n' "$i" > .sublime-projects/$i.sublime-project
 
   git -C $i remote add upstream `git -C $i config --get remote.origin.url | sed 's/github.com:Fraser999/github.com:maidsafe/'`
   git -C $i remote set-url --push upstream disable_push
