@@ -59,7 +59,8 @@
 1. Install dependencies and toolchain:
 
    ```sh
-   sudo apt-get install gcc-arm-linux-gnueabihf libc6-armhf-cross libc6-dev-armhf-cross
+   sudo apt update
+   sudo apt install gcc-arm-linux-gnueabihf libc6-armhf-cross libc6-dev-armhf-cross -y
    rustup target add armv7-unknown-linux-gnueabihf
    ```
 
@@ -85,7 +86,8 @@ Note: to build a native target, use `./configure --host=arm-linux-gnueabihf`.
 1. Install dependencies and toolchain:
 
    ```sh
-   sudo apt-get install linux-libc-dev:i386
+   sudo apt update
+   sudo apt install build-essential gcc-multilib -y
    rustup target add i686-unknown-linux-gnu
    ```
 
