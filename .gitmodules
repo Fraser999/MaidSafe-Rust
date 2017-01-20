@@ -20,8 +20,8 @@
     path = Rust Sodium
     url = git@github.com:Fraser999/rust_sodium
 [submodule "SAFE Client Libs"]
-    path = SAFE Client Libs
-    url = git@github.com:Fraser999/safe_client_libs
+	path = SAFE Client Libs
+	url = git@github.com:Fraser999/safe_client_libs
 [submodule "SAFE Launcher"]
     path = SAFE Launcher
     url = git@github.com:Fraser999/safe_launcher
