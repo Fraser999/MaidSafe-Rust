@@ -7,9 +7,6 @@
 [submodule "Crust"]
     path = Crust
     url = git@github.com:Fraser999/crust
-[submodule "Kademlia Routing Table"]
-    path = Kademlia Routing Table
-    url = git@github.com:Fraser999/kademlia_routing_table
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
