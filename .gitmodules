@@ -31,6 +31,9 @@
 [submodule "Self-Encryption"]
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
+[submodule "System URI"]
+	path = System URI
+	url = git@github.com:Fraser999/system_uri
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities

@@ -3,7 +3,7 @@ kind = "console"
 
 [[appenders.console.filters]]
 kind = "threshold"
-level = "info"
+level = "error"
 
 [appenders.console.encoder]
 pattern = "{({l}):1.1} {d(%H:%M:%S.%f):16.16} {([{f}:{L}]):30} {m}\n"
@@ -12,7 +12,7 @@ pattern = "{({l}):1.1} {d(%H:%M:%S.%f):16.16} {([{f}:{L}]):30} {m}\n"
 
 [appenders.file]
 kind = "file"
-path = "I:/MaidSafe/Rust/SuperProject/Routing/target/test.log"
+path = "../../../test.log"
 append = false
 
 [appenders.file.encoder]
