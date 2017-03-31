@@ -7,6 +7,9 @@
 [submodule "Crust"]
     path = Crust
     url = git@github.com:Fraser999/crust
+[submodule "Fake Clock"]
+    path = Fake Clock
+    url = git@github.com:Fraser999/fake_clock
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
@@ -17,8 +20,8 @@
     path = Rust Sodium
     url = git@github.com:Fraser999/rust_sodium
 [submodule "SAFE Client Libs"]
-	path = SAFE Client Libs
-	url = git@github.com:Fraser999/safe_client_libs
+    path = SAFE Client Libs
+    url = git@github.com:Fraser999/safe_client_libs
 [submodule "SAFE Launcher"]
     path = SAFE Launcher
     url = git@github.com:Fraser999/safe_launcher
@@ -32,8 +35,8 @@
     path = Self-Encryption
     url = git@github.com:Fraser999/self_encryption
 [submodule "System URI"]
-	path = System URI
-	url = git@github.com:Fraser999/system_uri
+    path = System URI
+    url = git@github.com:Fraser999/system_uri
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
