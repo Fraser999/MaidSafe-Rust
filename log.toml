@@ -1,3 +1,12 @@
+# {d} - The current time. By default, the ISO 8601 format is used. A custom format may be provided in the syntax accepted by `Tm::sprintf`, enclosed in `{}`s immediately after the specifier: `%d{%Y/%m/%d}`.
+# {f} - The source file that the log message came from.
+# {l} - The log level.
+# {L} - The line that the log message came from.
+# {m} - The log message.
+# {M} - The module that the log message came from.
+# {T} - The name of the thread that the log message came from.
+# {t} - The target of the log message.
+
 [appenders.console]
 kind = "console"
 
