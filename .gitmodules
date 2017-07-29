@@ -25,9 +25,6 @@
 [submodule "SAFE Client Libs"]
     path = SAFE Client Libs
     url = git@github.com:Fraser999/safe_client_libs
-[submodule "SAFE Launcher"]
-    path = SAFE Launcher
-    url = git@github.com:Fraser999/safe_launcher
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault

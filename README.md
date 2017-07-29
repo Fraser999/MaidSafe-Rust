@@ -10,7 +10,6 @@
 | [routing](https://github.com/maidsafe/routing)                           | [![](http://meritbadge.herokuapp.com/routing)](https://crates.io/crates/routing)                           | [![Build Status](https://travis-ci.org/maidsafe/routing.svg?branch=master)](https://travis-ci.org/maidsafe/routing)                           | [![Build status](https://ci.appveyor.com/api/projects/status/2w1joqd2h64o4xrh/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/routing/branch/master)              | [![Stories in Ready](https://badge.waffle.io/maidsafe/routing.png?label=ready&title=Ready)](https://waffle.io/maidsafe/routing)                           |
 | [rust_sodium](https://github.com/maidsafe/rust_sodium)                   | [![](http://meritbadge.herokuapp.com/rust_sodium)](https://crates.io/crates/rust_sodium)                   | [![Build Status](https://travis-ci.org/maidsafe/rust_sodium.svg?branch=master)](https://travis-ci.org/maidsafe/rust_sodium)                   | [![Build status](https://ci.appveyor.com/api/projects/status/kkgtqnx263xgk0c3/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/rust-sodium/branch/master)          | [![Stories in Ready](https://badge.waffle.io/maidsafe/rust_sodium.png?label=ready&title=Ready)](https://waffle.io/maidsafe/rust_sodium)                   |
 | [safe_client_libs](https://github.com/maidsafe/safe_client_libs)         | [![](http://meritbadge.herokuapp.com/safe_core)](https://crates.io/crates/safe_core)                       | [![Build Status](https://travis-ci.org/maidsafe/safe_client_libs.svg?branch=master)](https://travis-ci.org/maidsafe/safe_client_libs)         | [![Build status](https://ci.appveyor.com/api/projects/status/c61jthx04us5j57j/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/safe-client-libs/branch/master)     | [![Stories in Ready](https://badge.waffle.io/maidsafe/safe_client_libs.png?label=ready&title=Ready)](https://waffle.io/maidsafe/safe_client_libs)         |
-| [safe_launcher](https://github.com/maidsafe/safe_launcher)               | [![](http://meritbadge.herokuapp.com/safe_launcher)](https://crates.io/crates/safe_launcher)               | [![Build Status](https://travis-ci.org/maidsafe/safe_launcher.svg?branch=master)](https://travis-ci.org/maidsafe/safe_launcher)               | [![Build status](https://ci.appveyor.com/api/projects/status/xnsjhx27snoh4lmy/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/safe-launcher/branch/master)        | [![Stories in Ready](https://badge.waffle.io/maidsafe/safe_launcher.png?label=ready&title=Ready)](https://waffle.io/maidsafe/safe_launcher)               |
 | [safe_vault](https://github.com/maidsafe/safe_vault)                     | [![](http://meritbadge.herokuapp.com/safe_vault)](https://crates.io/crates/safe_vault)                     | [![Build Status](https://travis-ci.org/maidsafe/safe_vault.svg?branch=master)](https://travis-ci.org/maidsafe/safe_vault)                     | [![Build status](https://ci.appveyor.com/api/projects/status/ohu678c6ufw8b2bn/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/safe-vault/branch/master)           | [![Stories in Ready](https://badge.waffle.io/maidsafe/safe_vault.png?label=ready&title=Ready)](https://waffle.io/maidsafe/safe_vault)                     |
 | [secure_serialisation](https://github.com/maidsafe/secure_serialisation) | [![](http://meritbadge.herokuapp.com/secure_serialisation)](https://crates.io/crates/secure_serialisation) | [![Build Status](https://travis-ci.org/maidsafe/secure_serialisation.svg?branch=master)](https://travis-ci.org/maidsafe/secure_serialisation) | [![Build status](https://ci.appveyor.com/api/projects/status/fw4t0s9dkipefjuy/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/secure-serialisation/branch/master) | [![Stories in Ready](https://badge.waffle.io/maidsafe/secure_serialisation.png?label=ready&title=Ready)](https://waffle.io/maidsafe/secure_serialisation) |
 | [self_encryption](https://github.com/maidsafe/self_encryption)           | [![](http://meritbadge.herokuapp.com/self_encryption)](https://crates.io/crates/self_encryption)           | [![Build Status](https://travis-ci.org/maidsafe/self_encryption.svg?branch=master)](https://travis-ci.org/maidsafe/self_encryption)           | [![Build status](https://ci.appveyor.com/api/projects/status/htljxqrosx1i237s/branch/master?svg=true)](https://ci.appveyor.com/project/MaidSafe-QA/self-encryption/branch/master)      | [![Stories in Ready](https://badge.waffle.io/maidsafe/self_encryption.png?label=ready&title=Ready)](https://waffle.io/maidsafe/self_encryption)           |
@@ -18,7 +17,7 @@
 
 
 
-# Setup for Building on 64-bit Windows
+# Setup for Building on 64-bit Windows with MinGW
 
 1. Install [rustup](https://www.rustup.rs).
 
@@ -37,7 +36,7 @@
 
 
 
-# Setup for Building on 32-bit Windows
+# Setup for Building on 32-bit Windows with MinGW
 
 1. Install [rustup](https://www.rustup.rs).
 
