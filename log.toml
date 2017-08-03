@@ -30,16 +30,17 @@ pattern = "{({l}):1.1} {d(%H:%M:%S.%f):16.16} {([{f}:{L}]):30} {m}\n"
 
 
 [root]
-level = "trace"
+level = "info"
 appenders = ["console", "file"]
 
-# [loggers."crust"]
-# level = "debug"
-# appenders = ["async_file"]
-# additive = false
+[loggers."crust"]
+level = "trace"
 
-# [loggers."routing"]
-# level = "debug"
+[loggers."routing"]
+level = "trace"
 
-# [loggers."safe_vault"]
-# level = "debug"
+[loggers."routing_stats"]
+level = "trace"
+
+[loggers."safe_vault"]
+level = "trace"
