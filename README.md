@@ -29,12 +29,14 @@
 
    ```sh
    pacman -Sy pacman-mirrors
-   pacman -S --noconfirm mingw-w64-x86_64-gcc
+   pacman -S --noconfirm mingw-w64-x86_64-gcc base-devel
    ```
 
-1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
+1. Add the two newly-installed MinGW `bin` folders to `%PATH%`.
 
-
+   ```sh
+   setx /M PATH "C:\MSYS64\mingw64\bin;C:\MSYS64\usr\bin;%PATH%"
+   ```
 
 # Setup for Building on 32-bit Windows with MinGW
 
@@ -48,10 +50,14 @@
 
    ```sh
    pacman -Sy pacman-mirrors
-   pacman -S --noconfirm mingw-w64-i686-gcc
+   pacman -S --noconfirm mingw-w64-i686-gcc base-devel
    ```
 
-1. Add the newly-installed MinGW `bin` folder to `%PATH%`.
+1. Add the two newly-installed MinGW `bin` folders to `%PATH%`.
+
+   ```sh
+   setx /M PATH "C:\MSYS64\mingw32\bin;C:\MSYS64\usr\bin;%PATH%"
+   ```
 
 
 
