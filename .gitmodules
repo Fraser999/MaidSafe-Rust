@@ -10,6 +10,9 @@
 [submodule "Fake Clock"]
     path = Fake Clock
     url = git@github.com:Fraser999/fake_clock
+[submodule "GetIfAddrs"]
+    path = GetIfAddrs
+    url = git@github.com:Fraser999/get_if_addrs
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
