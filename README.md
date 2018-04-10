@@ -23,7 +23,7 @@
 
 1. Install [MSYS2](https://msys2.github.io).
 
-1. Run `mingw64_shell.bat` from wherever you installed MSYS2 (e.g. `C:\msys64`).
+1. Run `msys2.exe` from wherever you installed MSYS2 (e.g. `C:\msys64`).
 
 1. From this terminal, install the required tools:
 
@@ -35,7 +35,7 @@
 1. Add the two newly-installed MinGW `bin` folders to `%PATH%`.
 
    ```sh
-   setx /M PATH "C:\MSYS64\mingw64\bin;C:\MSYS64\usr\bin;%PATH%"
+   setx /M PATH "C:\msys64\mingw64\bin;C:\msys64\usr\bin;%PATH%"
    ```
 
 # Setup for Building on 32-bit Windows with MinGW
@@ -44,7 +44,7 @@
 
 1. Install [MSYS2](https://msys2.github.io).
 
-1. Run `mingw32_shell.bat` from wherever you installed MSYS2 (e.g. `C:\msys32`).
+1. Run `msys2.exe` from wherever you installed MSYS2 (e.g. `C:\msys32`).
 
 1. From this terminal, install the required tools:
 
@@ -56,7 +56,7 @@
 1. Add the two newly-installed MinGW `bin` folders to `%PATH%`.
 
    ```sh
-   setx /M PATH "C:\MSYS64\mingw32\bin;C:\MSYS64\usr\bin;%PATH%"
+   setx /M PATH "C:\msys32\mingw32\bin;C:\msys32\usr\bin;%PATH%"
    ```
 
 
