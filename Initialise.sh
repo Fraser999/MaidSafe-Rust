@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "Initialising submodules\n-----------------------"
-git submodule update --init
+git submodule update --init --remote --jobs 20
 git submodule foreach 'git checkout master'
 echo "==============================================================================="
 
