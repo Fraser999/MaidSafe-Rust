@@ -16,6 +16,9 @@
 [submodule "LRU Time Cache"]
     path = LRU Time Cache
     url = git@github.com:Fraser999/lru_time_cache
+[submodule "Parsec"]
+    path = Parsec
+    url = git@github.com:Fraser999/parsec
 [submodule "Resource Proof"]
     path = Resource Proof
     url = git@github.com:Fraser999/resource_proof
