@@ -36,7 +36,7 @@ else
             if [[ $(git diff ${file} 2>&1) ]]; then
                 modified_files+=(${file})
             else
-                rustfmt --skip-children --write-mode=diff $file &>/dev/null
+                rustfmt --check $file &>/dev/null
                 if [[ $? -ne 0 ]]; then
                     problem_files+=(${file})
                 fi
@@ -49,7 +49,7 @@ else
         printf "${prefix} The following files in this commit need formatting:\n"
         for file in "${problem_files[@]}"; do
             printf "    ${orange}${file}${no_colour}\n"
-            rustfmt --skip-children --write-mode=diff $file
+            rustfmt --check $file
         done
         exit 1
     elif [[ -n "${modified_files}" ]]; then
@@ -65,7 +65,7 @@ else
 fi
 
 # Run clippy if available.
-travis_rust_nightly_version=$(sed -n -e '/nightly-/ s/ *- *//p' .travis.yml)
+travis_rust_nightly_version=$(sed -n -e '/- nightly-/ s/ *- *//p' .travis.yml)
 travis_clippy_version=$(sed -n -e '/cargo_install.sh clippy/ s/[^0-9]*\([0-9\.]\+\)[^0-9]*/\1/p' .travis.yml)
 cargo +${travis_rust_nightly_version} >/dev/null 2>&1
 if [[ $? -ne 0 ]]; then
