@@ -31,6 +31,9 @@
 [submodule "SAFE Client Libs"]
     path = SAFE Client Libs
     url = git@github.com:Fraser999/safe_client_libs
+[submodule "SAFE Crypto"]
+    path = SAFE Crypto
+    url = git@github.com:Fraser999/safe_crypto
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault
@@ -43,6 +46,9 @@
 [submodule "System URI"]
     path = System URI
     url = git@github.com:Fraser999/system_uri
+[submodule "Tokio uTP"]
+    path = Tokio uTP
+    url = git@github.com:Fraser999/tokio_utp
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
