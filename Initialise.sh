@@ -6,7 +6,8 @@ git submodule foreach 'git checkout master'
 echo "==============================================================================="
 
 IFS=$(echo -en "\n\b")
-mkdir .sublime-projects
+mkdir -p .sublime-projects
+mkdir -p .vs-code-workspaces
 for i in `grep path .gitmodules | sed 's/.*= //'` ; do
   echo -e "Configuring $i\n------------`echo "$i" | tr [:print:] -`"
 
@@ -14,10 +15,17 @@ for i in `grep path .gitmodules | sed 's/.*= //'` ; do
   echo -e '#!/bin/bash\n. "$(git rev-parse --git-path ../../../SubmodulePreCommitHook.sh)"' > "$hook"
   chmod +x "$hook"
   printf '{\n\t"folders":\n\t[\n\t\t{\n\t\t\t"path": "../%s"\n\t\t}\n\t]\n}\n' "$i" > .sublime-projects/$i.sublime-project
+  printf '{\n\t"folders": [\n\t\t{\n\t\t\t"path": "..\\\\%s"\n\t\t}\n\t],\n\t"settings": {}\n}\n' "$i" > .vs-code-workspaces/$i.code-workspace
 
-  git -C $i remote add upstream `git -C $i config --get remote.origin.url | sed 's/github.com:Fraser999/github.com:maidsafe/'`
-  git -C $i remote set-url --push upstream disable_push
-  git -C $i fetch upstream
+  # if [[ ! -e "$i/.vscode/tasks.json" ]]; then
+  #   mkdir -p "$i/.vscode"
+  #   cp tasks.json "$i/.vscode"
+  # fi
+
+  if [[ $(git -C $i remote show) != *upstream* ]]; then
+    git -C $i remote add -f upstream `git -C $i config --get remote.origin.url | sed 's/github.com:Fraser999/github.com:maidsafe/'`
+    git -C $i remote set-url --push upstream disable_push
+  fi
 
   echo ""
   git -C $i remote -v

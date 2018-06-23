@@ -1,0 +1,263 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clippy",
+            "command": "cargo +nightly$NIGHTLY_VERSION clippy --target-dir=target/clippy --all-targets",
+            "windows": {
+                "command": "cargo +nightly$env:NIGHTLY_VERSION clippy --target-dir=target/clippy --all-targets"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Clippy Use-Mock",
+            "command": "cargo +nightly$NIGHTLY_VERSION clippy --target-dir=target/clippy/use-mock --features use-mock-crypto,use-mock-crust --all-targets",
+            "windows": {
+                "command": "cargo +nightly$env:NIGHTLY_VERSION clippy --target-dir=target/clippy/use-mock --features use-mock-crypto,use-mock-crust --all-targets",
+            },
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Build Release",
+            "command": "cargo build --target-dir=target/stable --release --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Build Debug",
+            "command": "cargo build --target-dir=target/stable --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Release Without Running",
+            "command": "cargo test --target-dir=target/stable --no-run --release --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Debug Without Running",
+            "command": "cargo test --target-dir=target/stable --no-run --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Release Use-Mock Without Running",
+            "command": "cargo test --target-dir=target/stable/use-mock --no-run --features use-mock-crypto,use-mock-crust --release --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Debug Use-Mock Without Running",
+            "command": "cargo test --target-dir=target/stable/use-mock --no-run --features use-mock-crypto,use-mock-crust --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Doc Without Dependencies",
+            "command": "cargo doc --target-dir=target/stable --release --no-deps",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Doc",
+            "command": "cargo doc --target-dir=target/stable --release",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Update",
+            "command": "cargo update --verbose",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Clean",
+            "command": "cargo clean",
+            "group": "build",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Release",
+            "command": "cargo test --target-dir=target/stable --release --verbose -- --nocapture --color=always",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Debug",
+            "command": "cargo test --target-dir=target/stable --verbose -- --nocapture --color=always",
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Release Use-Mock",
+            "command": "cargo test --target-dir=target/stable/use-mock --release --features use-mock-crypto,use-mock-crust --verbose -- --nocapture --color=always",
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Test Debug Use-Mock",
+            "command": "cargo test --target-dir=target/stable/use-mock --features use-mock-crypto,use-mock-crust --verbose -- --nocapture --color=always",
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Run Release",
+            "command": "cargo run --target-dir=target/stable --release --verbose",
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Run Debug",
+            "command": "cargo run --target-dir=target/stable --verbose",
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Bench",
+            "command": "cargo +nightly$NIGHTLY_VERSION bench --target-dir=target/nightly/bench --verbose",
+            "windows": {
+                "command": "cargo +nightly$env:NIGHTLY_VERSION bench --target-dir=target/nightly/bench --verbose",
+            },
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "label": "Bench Without Running",
+            "command": "cargo +nightly$NIGHTLY_VERSION bench --target-dir=target/nightly/bench --no-run --verbose",
+            "windows": {
+                "command": "cargo +nightly$env:NIGHTLY_VERSION bench --target-dir=target/nightly/bench --no-run --verbose",
+            },
+            "group": "test",
+            "type": "shell",
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
+        }
+    ]
+}
