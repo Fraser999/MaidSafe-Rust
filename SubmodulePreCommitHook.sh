@@ -13,6 +13,18 @@ warning="${orange}Warning:${no_colour}"
 ok="${green}OK${no_colour}"
 failed="${red}Failed${no_colour}"
 
+# Check for instances of "Fix before committing"
+printf "${prefix} Checking for instances of 'Fix before committing'... "
+todos=$(grep -irn --exclude-dir=target --exclude-dir=.git "fix before committing" .)
+if [[ $? -eq 0 ]]; then
+    printf "${failed}\n"
+    printf "${prefix} The following issues need to be addressed:\n"
+    printf "${todos}\n"
+    exit 1
+else
+    printf "${ok}\n"
+fi
+
 # Run rustfmt if available.
 travis_rustfmt_version=$(sed -n -e '/cargo_install.sh rustfmt/ s/[^0-9]*\([0-9\.]\+\)[^0-9]*/\1/p' .travis.yml)
 rustfmt_version=$(rustfmt --version 2>&1)
@@ -27,40 +39,13 @@ fi
 if [[ ${skip_rustfmt} ]]; then
     printf "${prefix} ${warning} Skipping rustfmt.\n"
 else
-    problem_files=()
-    modified_files=()
-
-    printf "${prefix} Running 'rustfmt' on committed files... "
-    for file in $(git diff --name-only --cached); do
-        if [[ ${file: -3} == ".rs" ]]; then
-            if [[ $(git diff ${file} 2>&1) ]]; then
-                modified_files+=(${file})
-            else
-                rustfmt --check $file &>/dev/null
-                if [[ $? -ne 0 ]]; then
-                    problem_files+=(${file})
-                fi
-            fi
-        fi
-    done
-
-    if [[ -n "${problem_files}" ]]; then
-        printf "${failed}\n"
-        printf "${prefix} The following files in this commit need formatting:\n"
-        for file in "${problem_files[@]}"; do
-            printf "    ${orange}${file}${no_colour}\n"
-            rustfmt --check $file
-        done
-        exit 1
-    elif [[ -n "${modified_files}" ]]; then
-        printf "${failed}\n"
-        printf "${prefix} The following files in this commit have further uncommitted changes:\n"
-        for file in "${modified_files[@]}"; do
-            printf "    ${orange}${file}${no_colour}\n"
-        done
-        exit 1
-    else
+    printf "${prefix} Running 'cargo fmt -- --check'... "
+    if [[ $(cargo -- fmt --check 2>&1) ]]; then
         printf "${ok}\n"
+    else
+        printf "${failed}\n"
+        cargo fmt -- --check
+        exit 1
     fi
 fi
 
@@ -85,22 +70,11 @@ fi
 if [[ ${skip_clippy} ]]; then
     printf "${prefix} ${warning} Skipping clippy.\n"
 else
-    printf "${prefix} Running 'clippy'... "
+    printf "${prefix} Running 'clippy --all-targets'... "
     mkdir -p target
     clippy_out=target/.clippy.out
-    export CARGO_TARGET_DIR=target/clippy
     export RUSTFLAGS="-C codegen-units=8"
-    cargo +${travis_rust_nightly_version} clippy &>${clippy_out}
-    if [[ $? -ne 0 ]]; then
-        printf "${failed}\n"
-        printf "${prefix} The following issues need to be addressed:\n"
-        cat ${clippy_out}
-        exit 1
-    else
-        printf "${ok}\n"
-    fi
-    printf "${prefix} Running 'clippy --profile test'... "
-    cargo +${travis_rust_nightly_version} clippy --profile test &>${clippy_out}
+    cargo +${travis_rust_nightly_version} clippy --target-dir=target/clippy --all-targets &>${clippy_out}
     if [[ $? -ne 0 ]]; then
         printf "${failed}\n"
         printf "${prefix} The following issues need to be addressed:\n"
