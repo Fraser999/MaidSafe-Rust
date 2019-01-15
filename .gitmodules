@@ -10,6 +10,9 @@
 [submodule "Fake Clock"]
     path = Fake Clock
     url = git@github.com:Fraser999/fake_clock
+[submodule "FFI Utils"]
+    path = FFI Utils
+    url = git@github.com:Fraser999/ffi_utils
 [submodule "GetIfAddrs"]
     path = GetIfAddrs
     url = git@github.com:Fraser999/get_if_addrs
@@ -28,6 +31,9 @@
 [submodule "Rust Sodium"]
     path = Rust Sodium
     url = git@github.com:Fraser999/rust_sodium
+[submodule "SAFE Bindgen"]
+    path = SAFE Bindgen
+    url = git@github.com:Fraser999/safe_bindgen
 [submodule "SAFE Client Libs"]
     path = SAFE Client Libs
     url = git@github.com:Fraser999/safe_client_libs
@@ -46,9 +52,6 @@
 [submodule "System URI"]
     path = System URI
     url = git@github.com:Fraser999/system_uri
-[submodule "Tokio uTP"]
-    path = Tokio uTP
-    url = git@github.com:Fraser999/tokio_utp
 [submodule "Utilities"]
     path = Utilities
     url = git@github.com:Fraser999/maidsafe_utilities
