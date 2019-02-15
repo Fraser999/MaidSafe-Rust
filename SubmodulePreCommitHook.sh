@@ -26,13 +26,12 @@ else
 fi
 
 # Run rustfmt if available.
-travis_rustfmt_version=$(sed -n -e '/cargo_install.sh rustfmt/ s/[^0-9]*\([0-9\.]\+\)[^0-9]*/\1/p' .travis.yml)
 rustfmt_version=$(rustfmt --version 2>&1)
 if [[ $? -ne 0 ]]; then
     printf "${prefix} ${warning} rustfmt not available.\n"
     skip_rustfmt=1
-elif [[ ${travis_rustfmt_version} && ! "${rustfmt_version}" =~ "${travis_rustfmt_version}" ]]; then
-    printf "${prefix} ${warning} Installed rustfmt version \"${rustfmt_version}\" doesn't match \"${travis_rustfmt_version}\" specified in .travis.yml.\n"
+elif [[ ! "${rustfmt_version}" =~ "-stable" ]]; then
+    printf "${prefix} ${warning} Installed rustfmt version \"${rustfmt_version}\" isn't a stable version.\n"
     skip_rustfmt=1
 fi
 
@@ -50,21 +49,10 @@ else
 fi
 
 # Run clippy if available.
-travis_rust_nightly_version=$(sed -n -e '/- nightly-/ s/ *- *//p' .travis.yml)
-travis_clippy_version=$(sed -n -e '/cargo_install.sh clippy/ s/[^0-9]*\([0-9\.]\+\)[^0-9]*/\1/p' .travis.yml)
-cargo +${travis_rust_nightly_version} >/dev/null 2>&1
+clippy_version=$(cargo clippy -- --version 2>&1)
 if [[ $? -ne 0 ]]; then
-    printf "${prefix} ${warning} rust ${travis_rust_nightly_version} not available.\n"
+    printf "${prefix} ${warning} clippy not available.\n"
     skip_clippy=1
-else
-    clippy_version=$(cargo +${travis_rust_nightly_version} clippy -- --version 2>&1)
-    if [[ $? -ne 0 ]]; then
-        printf "${prefix} ${warning} clippy not available.\n"
-        skip_clippy=1
-    elif [[ ${travis_clippy_version} && ! "${clippy_version}" =~ "${travis_clippy_version}" ]]; then
-        printf "${prefix} ${warning} Installed clippy version \"${clippy_version}\" doesn't match \"${travis_clippy_version}\" specified in .travis.yml.\n"
-        skip_clippy=1
-    fi
 fi
 
 if [[ ${skip_clippy} ]]; then
