@@ -25,6 +25,23 @@ else
     printf "${ok}\n"
 fi
 
+# Use 'scripts' files if available
+printf "${prefix} Checking for 'scripts' folder... "
+if [[ -d "scripts" && ! -L "scripts" ]] ; then
+    printf "${ok}\n"
+    for script in scripts/*; do
+        printf "${prefix} Running ${script}...\n"
+        ${script}
+        if [[ $? -ne 0 ]]; then
+            printf "${prefix} ${red}Running '${script}' failed.${no_colour}\n"
+            exit $?
+        fi
+    done
+    exit 0
+else
+    printf "${orange}not found${orange}\n"
+fi
+
 # Run rustfmt if available.
 rustfmt_version=$(rustfmt --version 2>&1)
 if [[ $? -ne 0 ]]; then
