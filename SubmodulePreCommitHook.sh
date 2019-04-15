@@ -33,9 +33,10 @@ if [[ -d "scripts" && ! -L "scripts" ]]; then
         if [[ "${script}" != "scripts/travis_wait" ]]; then
             printf "${prefix} Running ${script}...\n"
             ${script}
-            if [[ $? -ne 0 ]]; then
+            exit_code=$?
+            if [[ ${exit_code} -ne 0 ]]; then
                 printf "${prefix} ${red}Running '${script}' failed.${no_colour}\n"
-                exit $?
+                exit ${exit_code}
             fi
         fi
     done
