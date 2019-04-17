@@ -17,10 +17,10 @@ for i in `grep path .gitmodules | sed 's/.*= //'` ; do
   printf '{\n\t"folders":\n\t[\n\t\t{\n\t\t\t"path": "../%s"\n\t\t}\n\t]\n}\n' "$i" > .sublime-projects/$i.sublime-project
   printf '{\n\t"folders": [\n\t\t{\n\t\t\t"path": "..\\\\%s"\n\t\t}\n\t],\n\t"settings": {}\n}\n' "$i" > .vs-code-workspaces/$i.code-workspace
 
-  # if [[ ! -e "$i/.vscode/tasks.json" ]]; then
-  #   mkdir -p "$i/.vscode"
-  #   cp tasks.json "$i/.vscode"
-  # fi
+  if [[ ! -e "$i/.vscode/tasks.json" ]]; then
+    mkdir -p "$i/.vscode"
+    cp tasks.json "$i/.vscode"
+  fi
 
   if [[ $(git -C $i remote show) != *upstream* ]]; then
     git -C $i remote add -f upstream `git -C $i config --get remote.origin.url | sed 's/github.com:Fraser999/github.com:maidsafe/'`

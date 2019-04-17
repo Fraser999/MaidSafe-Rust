@@ -22,6 +22,9 @@
 [submodule "Parsec"]
     path = Parsec
     url = git@github.com:Fraser999/parsec
+[submodule "Quic P2P"]
+    path = Quic P2P
+    url = git@github.com:Fraser999/quic-p2p
 [submodule "Resource Proof"]
     path = Resource Proof
     url = git@github.com:Fraser999/resource_proof

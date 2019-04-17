@@ -69,7 +69,7 @@ else
 fi
 
 # Run clippy if available.
-clippy_version=$(cargo clippy -- --version 2>&1)
+cargo clippy -- --version > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     printf "${prefix} ${warning} clippy not available.\n"
     skip_clippy=1
@@ -81,8 +81,7 @@ else
     printf "${prefix} Running 'clippy --all-targets'... "
     mkdir -p target
     clippy_out=target/.clippy.out
-    export RUSTFLAGS="-C codegen-units=8"
-    cargo +${travis_rust_nightly_version} clippy --target-dir=target/clippy --all-targets &>${clippy_out}
+    cargo clippy --all-targets &>${clippy_out}
     if [[ $? -ne 0 ]]; then
         printf "${failed}\n"
         printf "${prefix} The following issues need to be addressed:\n"

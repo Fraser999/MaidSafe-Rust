@@ -1,8 +1,17 @@
 [user]
 	email = fraser.hutchison@maidsafe.net
 	name = Fraser Hutchison
+[core]
+    excludesfile = <path to>/.gitignore_global
+    # Contents of .gitignore_global:
+    # MSVC/
+    # .vscode/
 [push]
 	default = simple
+[pull]
+    rebase = true
+[rebase]
+    autoSquash = true
 [fetch]
 	prune = true
 [help]
@@ -10,3 +19,33 @@
 [status]
 	short = true
 	branch = true
+[color]
+    status = auto
+    branch = auto
+[alias]
+    rhm = "!git reset --hard upstream/master && git status"
+    hist = log -10 --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[add-remote]
+    preferredFork = maidsafe
+    mainForkOwnerAlias = upstream
+[add-remote "forkAlias"]
+    afck = Andreas
+    canndrew = Andrew
+    dirvine = David
+    fizyk20 = Bart
+    Fraser999 = Fraser
+    jeanphilippeD = JP
+    krishnaIndia = Krishna
+    m-cat = Marcin
+    madadam = Adam
+    maidsafe = MaidSafe
+    maqi = Qi
+    nbaksalyar = Nikita
+    NickLambert = Nick
+    octol = Jon
+    pierrechevalier83 = Pierre
+    povilasb = Povilas
+    shankar2015 = Shankar
+    StephenCoyleAtMaidSafe = Stephen
+    ustulation = Spandan
+    Viv-Rajkumar = Viv
