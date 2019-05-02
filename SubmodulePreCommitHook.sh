@@ -45,49 +45,32 @@ else
     printf "${orange}not found${orange}\n"
 fi
 
-# Run rustfmt if available.
-rustfmt_version=$(rustfmt --version 2>&1)
-if [[ $? -ne 0 ]]; then
-    printf "${prefix} ${warning} rustfmt not available.\n"
-    skip_rustfmt=1
-elif [[ ! "${rustfmt_version}" =~ "-stable" ]]; then
-    printf "${prefix} ${warning} Installed rustfmt version \"${rustfmt_version}\" isn't a stable version.\n"
-    skip_rustfmt=1
-fi
-
-if [[ ${skip_rustfmt} ]]; then
-    printf "${prefix} ${warning} Skipping rustfmt.\n"
-else
-    printf "${prefix} Running 'cargo fmt -- --check'... "
-    if [[ $(cargo -- fmt --check 2>&1) ]]; then
-        printf "${ok}\n"
-    else
-        printf "${failed}\n"
-        cargo fmt -- --check
-        exit 1
-    fi
-fi
-
-# Run clippy if available.
-cargo clippy -- --version > /dev/null 2>&1
-if [[ $? -ne 0 ]]; then
-    printf "${prefix} ${warning} clippy not available.\n"
-    skip_clippy=1
-fi
-
-if [[ ${skip_clippy} ]]; then
-    printf "${prefix} ${warning} Skipping clippy.\n"
-else
-    printf "${prefix} Running 'clippy --all-targets'... "
-    mkdir -p target
-    clippy_out=target/.clippy.out
-    cargo clippy --all-targets &>${clippy_out}
+check() {
+    cargo $1 -- --version > /dev/null 2>&1
     if [[ $? -ne 0 ]]; then
-        printf "${failed}\n"
-        printf "${prefix} The following issues need to be addressed:\n"
-        cat ${clippy_out}
-        exit 1
-    else
-        printf "${ok}\n"
+        printf "${prefix} ${warning} $1 not available.\n"
+        local skip=1
     fi
-fi
+
+    if [[ ${skip} ]]; then
+        printf "${prefix} ${warning} Skipping $1.\n"
+    else
+        printf "${prefix} Running cargo "
+        printf "%s " $@
+        printf "... "
+        mkdir -p target
+        local output_file=target/.$1.out
+        cargo $@ &>${output_file}
+        if [[ $? -ne 0 ]]; then
+            printf "${failed}\n"
+            printf "${prefix} The following issues need to be addressed:\n"
+            cat ${output_file}
+            exit 1
+        else
+            printf "${ok}\n"
+        fi
+    fi
+}
+
+check fmt -- --check
+check clippy --all-targets
