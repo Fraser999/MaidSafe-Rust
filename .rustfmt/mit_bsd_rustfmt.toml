@@ -1,0 +1,7 @@
+# Command to run:
+#
+# cargo +nightly fmt -- --config-path ../.rustfmt/mit_bsd_rustfmt.toml
+#
+merge_imports = true
+license_template_path = "../.rustfmt/mit_bsd_copyright_block.txt"
+use_try_shorthand = true

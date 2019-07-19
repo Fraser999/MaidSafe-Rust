@@ -44,8 +44,8 @@
     path = SAFE Crypto
     url = git@github.com:Fraser999/safe_crypto
 [submodule "SAFE Network Data"]
-	path = SAFE Network Data
-	url = git@github.com:Fraser999/safe-nd
+    path = SAFE Network Data
+    url = git@github.com:Fraser999/safe-nd
 [submodule "SAFE Vault"]
     path = SAFE Vault
     url = git@github.com:Fraser999/safe_vault
